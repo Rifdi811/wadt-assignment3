@@ -20,6 +20,12 @@ import { WebviewDirective } from './directives/webview.directive';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 
+// AngularFire2
+import { AngularFirestoreModule } from "angularfire2/firestore";
+import { AngularFireModule } from "angularfire2";
+import { CONF_LOCAL } from "../environments/environment.local";
+
+// These are some bootstrap3 JS stuff
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -45,7 +51,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AngularFireModule.initializeApp(CONF_LOCAL.firebase),
+    AngularFirestoreModule
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]
