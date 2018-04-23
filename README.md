@@ -32,7 +32,7 @@ With this sample, you can :
 Clone this repository locally :
 
 ``` bash
-git clone https://github.com/maximegris/angular-electron.git wadt-assignment3
+git clone https://github.com/PoliteknikBrunei-WADT/wadt-assignment3.git wadt-assignment3
 ```
 
 CD into `wadt-assignment3` and install dependencies with npm :
