@@ -54,6 +54,15 @@
   <button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> Button with tooltip
   </button>
   <button type="button" class="btn btn-info" (click)="openModal(template)">Create template modal</button>
+  <div class="row">
+    <div class="col-lg-12">
+      <ul>
+        <li *ngFor="let item of items | async">
+          <pre>{{ item | json }}</pre>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- Below is a bootstrap3 modal with logic found in home.component.ts -->

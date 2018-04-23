@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // Below is needed to use bootstrap3 modal
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-
+// Below for AngularFire2
+import { Observable } from "rxjs/Observable";
+import { AngularFirestore } from "angularfire2/firestore";
 
 @Component({
   selector: "app-home",
@@ -10,7 +12,11 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 })
 export class HomeComponent implements OnInit {
   public modalRef: BsModalRef;
-  constructor(private modalService: BsModalService) {}
+  public items: Observable<any[]>;
+
+  constructor(private modalService: BsModalService, db: AngularFirestore) {
+    this.items = db.collection('/songList').valueChanges();
+  }
 
   // The bootstrap3 modal logic - tutorial into implementing bootstrap3 and angular:
   // https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
