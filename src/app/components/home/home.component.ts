@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 // Below is needed to use bootstrap3 modal
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 // Below for AngularFire2
