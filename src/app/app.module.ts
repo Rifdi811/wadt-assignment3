@@ -30,13 +30,15 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
+import { TestComponent } from './components/test/test.component';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, WebviewDirective],
+  declarations: [AppComponent, HomeComponent, WebviewDirective, TestComponent],
   imports: [
     BrowserModule,
     FormsModule,
