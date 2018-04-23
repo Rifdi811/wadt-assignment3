@@ -35,7 +35,8 @@
     "e2e": "npm-run-all -p -r pree2e:build pree2e:protractor"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "ngx-bootstrap": "^2.0.4"
   },
   "devDependencies": {
     "@angular/cli": "1.7.4",
