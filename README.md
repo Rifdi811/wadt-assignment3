@@ -88,11 +88,9 @@ Note that you can't use Electron or NodeJS native libraries in this case. Please
 
 ## Contributors
 
-[<img alt="Maxime GRIS" src="https://avatars2.githubusercontent.com/u/10827551?v=3&s=117" width="117">](https://github.com/maximegris) |
-[<img alt="Maxime GRIS" src="https://avatars2.githubusercontent.com/u/508511?v=3&s=117" width="117">](https://github.com/bahit) |
+[<img alt="Maxime GRIS" src="https://avatars2.githubusercontent.com/u/10827551?v=3&s=117" width="117">](https://github.com/maximegris) | [<img alt="Maxime GRIS" src="https://avatars2.githubusercontent.com/u/508511?v=3&s=117" width="117">](https://github.com/bahit) |
 :---:
-|[Maxime GRIS](https://github.com/maximegris)|
-|[Bahit Hamid](https://github.com/bahit)|
+|[Maxime GRIS](https://github.com/maximegris)|[Bahit Hamid](https://github.com/bahit)|
 
 
 
