@@ -55,7 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     AngularFireModule.initializeApp(CONF_LOCAL.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule.enablePersistence()
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]
