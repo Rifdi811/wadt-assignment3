@@ -1,3 +1,16 @@
-<p>
-  groups works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let group of groups$ | async">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ group.name }}</h3>
+        </div>
+        <div class="panel-body">
+          GL: {{group.gl}}
+          <br> GC: {{group.gc}}
+          <br> No. of Student: {{group.quantity}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
