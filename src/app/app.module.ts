@@ -1,3 +1,4 @@
+import { AttendanceService } from './attendance.service';
 import 'zone.js/dist/zone-mix';
 import 'reflect-metadata';
 import '../polyfills';
@@ -31,6 +32,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { TestComponent } from './components/test/test.component';
+import { GroupsComponent } from './components/groups/groups.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -38,7 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, WebviewDirective, TestComponent],
+  declarations: [AppComponent, HomeComponent, WebviewDirective, TestComponent, GroupsComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -57,7 +59,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireModule.initializeApp(CONF_LOCAL.firebase),
     AngularFirestoreModule.enablePersistence()
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, AttendanceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
