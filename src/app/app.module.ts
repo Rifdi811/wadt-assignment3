@@ -1,3 +1,4 @@
+import { AttendanceService } from './attendance.service';
 import 'zone.js/dist/zone-mix';
 import 'reflect-metadata';
 import '../polyfills';
@@ -58,7 +59,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireModule.initializeApp(CONF_LOCAL.firebase),
     AngularFirestoreModule.enablePersistence()
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, AttendanceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
