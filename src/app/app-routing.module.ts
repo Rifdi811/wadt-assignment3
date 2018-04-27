@@ -1,3 +1,4 @@
+import { AttendancesComponent } from './components/attendances/attendances.component';
 import { GroupsComponent } from './components/groups/groups.component';
 import { TestComponent } from './components/test/test.component';
 import { HomeComponent } from './components/home/home.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   { path: "test", component: TestComponent },
-  { path: "groups", component:  GroupsComponent}
+  { path: "groups", component:  GroupsComponent},
+  { path: "attendances", component:  AttendancesComponent}
 ];
 
 @NgModule({
