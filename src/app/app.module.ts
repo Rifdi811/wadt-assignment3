@@ -4,7 +4,7 @@ import 'reflect-metadata';
 import '../polyfills';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
@@ -30,6 +30,7 @@ import { CONF_LOCAL } from "../environments/environment.local";
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AlertModule } from 'ngx-bootstrap';
 
 import { TestComponent } from './components/test/test.component';
 import { GroupsComponent } from './components/groups/groups.component';
@@ -44,6 +45,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     TranslateModule.forRoot({
@@ -56,6 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
+    AlertModule.forRoot(),
     AngularFireModule.initializeApp(CONF_LOCAL.firebase),
     AngularFirestoreModule.enablePersistence()
   ],
