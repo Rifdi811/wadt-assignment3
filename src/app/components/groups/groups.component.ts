@@ -65,6 +65,11 @@ export class GroupsComponent implements OnInit {
     this.removedMessage();
   }
 
+  // Clear form
+  reset(): void {
+    this.groupForm.reset();
+  }
+
   // Alert stuff, such as success in adding new data into DB
   add(): void {
     this.alerts.push({

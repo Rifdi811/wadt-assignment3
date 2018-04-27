@@ -40,6 +40,7 @@
         <div class="form-group">
           <div class="col-sm-10">
             <button type="submit" class="btn btn-primary" [disabled]="groupForm.invalid">Submit</button>
+            <button class="btn btn-warning" [disabled]="!groupForm.dirty && !groupForm.pristine" (click)="reset()">Clear</button>
           </div>
         </div>
       </form>
