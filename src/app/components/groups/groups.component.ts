@@ -65,6 +65,20 @@ export class GroupsComponent implements OnInit {
     this.removedMessage();
   }
 
+  // Populate input form
+  fill(group: Group) {
+    // Enable Update Button
+    this.updating = true;
+    // Fill in form
+    this.groupForm.setValue({
+      name: group.name,
+      gl: group.gl,
+      gc: group.gc,
+      quantity: group.quantity,
+      id: group.id
+    });
+  }
+
   // Clear form
   reset(): void {
     this.groupForm.reset();
