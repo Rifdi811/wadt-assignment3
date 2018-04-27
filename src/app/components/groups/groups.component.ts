@@ -48,7 +48,7 @@ export class GroupsComponent implements OnInit {
       ref.orderBy("name", "asc")
     );
 
-    this.updating = false;
+    this.updating = false; // setting initial state of updating boolean
   }
 
   // Saving group
@@ -60,8 +60,10 @@ export class GroupsComponent implements OnInit {
     const gl = this.groupForm.get("gl").value;
     // sending off to service to save
     this.groupService.add({ name, quantity, gc, gl });
-    this.add(); // Show confirmation
-    this.groupForm.reset();
+    this.addedGroupMessage(); // Show confirmation
+    this.groupForm.reset(); // clears form
+  }
+
   updateGroup(): void {
     console.log("Updating document: " + this.groupForm.get("id").value);
     const id = this.groupForm.get("id").value;
@@ -72,7 +74,7 @@ export class GroupsComponent implements OnInit {
     const updated =  new Date();
 
     const group: Partial<Group> = { name, quantity, gc, gl, updated };
-
+    // sending off to service to update, needs id and other data
     this.groupService.update(id, group);
     this.groupForm.reset(); // clears form
   }
@@ -81,7 +83,7 @@ export class GroupsComponent implements OnInit {
   remove(id: string) {
     this.groupService.remove(id);
     this.modalRef.hide();
-    this.removedMessage();
+    this.removedGroupMessage();
   }
 
   // Populate input form
@@ -104,7 +106,7 @@ export class GroupsComponent implements OnInit {
   }
 
   // Alert stuff, such as success in adding new data into DB
-  add(): void {
+  addedGroupMessage(): void {
     this.alerts.push({
       type: "success",
       msg: "Saved group into database",
@@ -112,7 +114,7 @@ export class GroupsComponent implements OnInit {
     });
   }
 
-  removedMessage(): void {
+  removedGroupMessage(): void {
     this.alerts.push({
       type: "warning",
       msg: "Removed group from database",
