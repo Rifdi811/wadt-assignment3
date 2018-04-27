@@ -5,4 +5,5 @@ export interface Group {
   quantity?: number;
   id?: string;
   created?: Date;
+  updated?: Date;
 }
