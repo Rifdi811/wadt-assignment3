@@ -34,6 +34,7 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { TestComponent } from './components/test/test.component';
 import { GroupsComponent } from './components/groups/groups.component';
+import { AttendancesComponent } from './components/attendances/attendances.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -41,7 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, WebviewDirective, TestComponent, GroupsComponent],
+  declarations: [AppComponent, HomeComponent, WebviewDirective, TestComponent, GroupsComponent, AttendancesComponent],
   imports: [
     BrowserModule,
     FormsModule,
