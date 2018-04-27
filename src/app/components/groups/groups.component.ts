@@ -17,5 +17,7 @@ export class GroupsComponent implements OnInit {
     this.groups$ = this.groupService.getCollection$(ref =>
       ref.orderBy("name", "asc")
     );
+
+    console.log("testing");
   }
 }
