@@ -39,7 +39,8 @@
         </div>
         <div class="form-group">
           <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary" [disabled]="groupForm.invalid">Submit</button>
+            <input type="hidden" formControlName="id">
+            <button type="submit" class="btn btn-primary" [disabled]="groupForm.invalid" (click)="updating ? updateGroup() : save()">{{updating ? 'Update' : 'Save'}}</button>
             <button class="btn btn-warning" [disabled]="!groupForm.dirty && !groupForm.pristine" (click)="reset()">Clear</button>
           </div>
         </div>

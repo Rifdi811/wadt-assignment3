@@ -40,7 +40,8 @@ export class GroupsComponent implements OnInit {
         Validators.pattern("^[0-9]*$")
       ]),
       gc: new FormControl("", Validators.required),
-      gl: new FormControl("", Validators.required)
+      gl: new FormControl("", Validators.required),
+      id: new FormControl("")
     });
 
     this.groups$ = this.groupService.getCollection$(ref =>
@@ -61,6 +62,19 @@ export class GroupsComponent implements OnInit {
     this.groupService.add({ name, quantity, gc, gl });
     this.add(); // Show confirmation
     this.groupForm.reset();
+  updateGroup(): void {
+    console.log("Updating document: " + this.groupForm.get("id").value);
+    const id = this.groupForm.get("id").value;
+    const name = this.groupForm.get("name").value;
+    const quantity = this.groupForm.get("quantity").value;
+    const gc = this.groupForm.get("gc").value;
+    const gl = this.groupForm.get("gl").value;
+    const updated =  new Date();
+
+    const group: Partial<Group> = { name, quantity, gc, gl, updated };
+
+    this.groupService.update(id, group);
+    this.groupForm.reset(); // clears form
   }
 
   // Delete Group
