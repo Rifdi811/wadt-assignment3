@@ -11,7 +11,7 @@
 
       <form [formGroup]="groupForm" class="form-horizontal">
         <div class="form-group">
-          <legend>Add Group</legend>
+          <legend>{{updating ? 'Updating Group' : 'Add Group'}}</legend>
         </div>
         <div class="form-group">
           <label for="inputGroupName" class="col-sm-2 control-label">Group Name</label>

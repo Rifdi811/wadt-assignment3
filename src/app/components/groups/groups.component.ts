@@ -23,6 +23,9 @@ export class GroupsComponent implements OnInit {
   modalRef: BsModalRef;
   message: string;
 
+  // Boolean for checking if updating
+  updating: boolean;
+
   constructor(
     private groupService: AttendanceService,
     private modalService: BsModalService
@@ -43,6 +46,8 @@ export class GroupsComponent implements OnInit {
     this.groups$ = this.groupService.getCollection$(ref =>
       ref.orderBy("name", "asc")
     );
+
+    this.updating = false;
   }
 
   // Saving group
