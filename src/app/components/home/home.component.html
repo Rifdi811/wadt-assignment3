@@ -13,10 +13,10 @@
         <!-- List group -->
         <ul class="list-group">
           <a routerLink="/groups" routerLinkActive="active"><li class="list-group-item">List Groups</li></a>
-          <li class="list-group-item">List GL / AGL</li>
-          <li class="list-group-item">List Modules</li>
-          <li class="list-group-item">Sample Attendance (view by GL)</li>
-          <li class="list-group-item">Sample Attendance (view by ML)</li>
+          <a routerLink="/gl"><li class="list-group-item">List GL / AGL</li></a>
+          <a routerLink="/modules"><li class="list-group-item">List Modules</li></a>
+          <a routerLink="/attendances" routerLinkActive="active"><li class="list-group-item">Sample Attendance (view by GL)</li></a>
+          <a routerLink="/attendancesLecturerView"><li class="list-group-item">Sample Attendance (view by ML)</li></a>
         </ul>
       </div>
     </div>
@@ -30,7 +30,7 @@
                 <h3 class="panel-title">Total Number of Groups</h3>
               </div>
               <div class="panel-body">
-                Panel content
+                To make this work, when adding groups or removing, there should be a function that saves the value of this meta data into a dedicated field. Thus from there we could count the values
               </div>
             </div>
           </div>
