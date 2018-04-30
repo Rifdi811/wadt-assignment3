@@ -1,3 +1,4 @@
+import { AvatarModule } from "ng2-avatar";
 import { AttendanceService } from "./attendance.service";
 import "zone.js/dist/zone-mix";
 import "reflect-metadata";
@@ -76,7 +77,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ModalModule.forRoot(),
     AlertModule.forRoot(),
     AngularFireModule.initializeApp(CONF_LOCAL.firebase),
-    AngularFirestoreModule.enablePersistence()
+    AngularFirestoreModule.enablePersistence(),
+    AvatarModule.forRoot()
   ],
   providers: [ElectronService, AttendanceService],
   bootstrap: [AppComponent]
